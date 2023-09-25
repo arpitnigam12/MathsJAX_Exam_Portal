@@ -89,7 +89,7 @@ export default function Main() {
 
     ul {
       justify-content: left;
-      color: pink;
+      color: black;
     }
 
     form {
