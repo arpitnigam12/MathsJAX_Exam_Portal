@@ -75,6 +75,11 @@ export default function Main() {
       max-width: 600px; /* Limit the width of the grey container */
       box-sizing: border-box; /* Include padding in width */
     }
+    .grey-container:hover {
+    transform: scale(1.05); /* Enlarge the box on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add a shadow on hover */
+  }
+
 
     .title {
       font-size: 24px;
@@ -89,8 +94,7 @@ export default function Main() {
 
     ul {
       justify-content: left;
-      color: brown;
-      
+      color: black;
     }
 
     form {

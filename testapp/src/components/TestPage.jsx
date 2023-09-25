@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import {  useNavigate } from 'react-router-dom';
+import { MathJax } from 'better-react-mathjax'; // Import MathJax components
 import '../styles/TestPage.css';
-import MathJax from 'react-mathjax2';
+
 
 
 
@@ -129,6 +130,7 @@ export default function TestPage() {
     // Pass the total time spent on each question to FinishPage
     navigate(`/finish?username=${username}&questions=${selectedQuestions.join(',')}&totalTime=${testTimer}&questionTimes=${updatedQuestionTimes.join(',')}`);
   }
+  
 
   return (
     <div className='container'>
@@ -146,7 +148,8 @@ export default function TestPage() {
   {currentQuestion && (
     <div className='question-box'>
       <h2>Question {currentQuestionIndex + 1}:</h2>
-      <MathJax.Node>{currentQuestion.Question}</MathJax.Node>
+      <MathJax>{` $$${currentQuestion.Question}$$ `}</MathJax>
+
     </div>
   )}
 </div>
