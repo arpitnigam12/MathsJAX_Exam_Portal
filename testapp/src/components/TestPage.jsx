@@ -4,8 +4,6 @@ import { MathJax } from 'better-react-mathjax'; // Import MathJax components
 import '../styles/TestPage.css';
 
 
-
-
 export default function TestPage() {
   const [username, setUsername] = useState('');
   const [selectedQuestions, setSelectedQuestions] = useState([]);
@@ -130,7 +128,6 @@ export default function TestPage() {
     // Pass the total time spent on each question to FinishPage
     navigate(`/finish?username=${username}&questions=${selectedQuestions.join(',')}&totalTime=${testTimer}&questionTimes=${updatedQuestionTimes.join(',')}`);
   }
-  
 
   return (
     <div className='container'>
@@ -148,7 +145,7 @@ export default function TestPage() {
   {currentQuestion && (
     <div className='question-box'>
       <h2>Question {currentQuestionIndex + 1}:</h2>
-      <MathJax>{` $$${currentQuestion.Question}$$ `}</MathJax>
+      <MathJax>{`$$${currentQuestion.Question}$$`}</MathJax>
 
     </div>
   )}
