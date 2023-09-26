@@ -25,30 +25,29 @@ export default function FinishPage() {
   }, []);
 
   const finishPageStyles = `
-    /* Add your custom CSS styles for the FinishPage component here */
     .container {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      background-color: #000; /* Background color */
+      background-color: #000;
     }
 
     .grey-container {
-      background-color: #f0f0f0; /* Grey background color */
-      border: 1px solid #ddd; /* Add a border for a formal look */
-      border-radius: 5px; /* Add rounded corners */
+      background-color: #f0f0f0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
       padding: 20px;
       width: 100%;
-      max-width: 600px; /* Limit the width of the grey container */
-      box-sizing: border-box; /* Include padding in width */
+      max-width: 600px;
+      box-sizing: border-box;
     }
 
     .title {
       font-size: 24px;
       margin-bottom: 20px;
-      font-weight: bold; /* Make text bold */
+      font-weight: bold;
       color: white;
     }
 
@@ -65,7 +64,7 @@ export default function FinishPage() {
       list-style-type: none;
       padding: 0;
     }
- 
+
     li {
       margin-bottom: 10px;
     }

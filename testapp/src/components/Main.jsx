@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
 
-
 export default function Main() {
   const inputRef = useRef(null);
   const [selectedQuestions, setSelectedQuestions] = useState([]);
@@ -30,7 +29,6 @@ export default function Main() {
     const username = inputRef.current.value;
     const selectedQuestionsString = selectedQuestions.join(',');
 
-    // Validate username and selected questions
     let isValid = true;
 
     if (username.trim() === '') {
@@ -47,39 +45,36 @@ export default function Main() {
       setQuestionsError('');
     }
 
-    // If validation passes, proceed to start the test
     if (isValid) {
-      // Pass the selected question IDs as a query parameter
       window.location.href = `/test?username=${username}&questions=${selectedQuestionsString}`;
     }
   };
 
   const mainStyles = `
-    /* Add your custom CSS styles for the Main component here */
     .container {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      background-color: #000; /* Background color */
+      background-color: #000;
     }
 
     .grey-container {
-      background-color: #f0f0f0; /* Grey background color */
-      border: 1px solid #ddd; /* Add a border for a formal look */
-      border-radius: 5px; /* Add rounded corners */
+      background-color: #f0f0f0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
       padding: 20px;
       width: 100%;
       align-items:stretch;
-      max-width: 600px; /* Limit the width of the grey container */
-      box-sizing: border-box; /* Include padding in width */
+      max-width: 600px;
+      box-sizing: border-box;
     }
-    .grey-container:hover {
-    transform: scale(1.05); /* Enlarge the box on hover */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add a shadow on hover */
-  }
 
+    .grey-container:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
 
     .title {
       font-size: 24px;

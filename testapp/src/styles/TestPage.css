@@ -1,93 +1,84 @@
-/* Reset default margin and padding */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
 }
 
-/* Make the container full-screen and centered */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #000; /* Background color */
-    padding: 20px; /* Add some padding for all views */
-    box-sizing: border-box; /* Include padding in width */
+    background-color: #000;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-/* Style for the username and timer */
 .top-right {
     position: absolute;
     top: 20px;
     right: 20px;
-    color: #fff; /* Text color */
+    color: #fff;
 }
 
 .icon {
-    display: flex; /* Use flexbox to align icon and text horizontally */
-    align-items: center; /* Vertically center the content */
-    text-align: right; /* Align text to the right */
-    margin-right: 20px; /* Adjust the margin as needed for spacing */
+    display: flex;
+    align-items: center;
+    text-align: right;
+    margin-right: 20px;
 }
 
 .fa {
-    margin-right: 5px; /* Add some space between the icon and text */
+    margin-right: 5px;
 }
 
-/* Style for the question text */
 .center {
     text-align: left;
-    font-weight: bold; /* Make text bold */
-    color: #000000; /* Text color */
-    margin-bottom: 20px; /* Add spacing below the question */
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 20px;
 }
 
 .grey-container {
-    background-color: #f0f0f0; /* Grey background color */
-    border: 1px solid #ddd; /* Add a border for a formal look */
-    border-radius: 5px; /* Add rounded corners */
-    padding: 20px; /* Adjust padding for all views */
-    width: 90%; /* Make the container width 100% for all views */
-    max-width: 800px; /* Limit the maximum width for larger screens */
-    box-sizing: border-box; /* Include padding in width */
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    box-sizing: border-box;
 }
 
-/* Style for the navigation buttons */
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px; /* Gap between buttons */
+    gap: 15px;
 }
 
 .btn {
     padding: 10px;
-    background-color: #0074d9; /* Button background color */
-    color: #fff; /* Button text color */
+    background-color: #0074d9;
+    color: #fff;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
-    width: 100%; /* Make buttons width 100% for all views */
-    text-align: center; /* Center button text for all views */
-    font-size: 16px; /* Adjust font size for all views */
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
 }
 
-/* Hover effect for buttons */
 .btn:hover {
-    background-color: #0056b3; /* Button background color on hover */
+    background-color: #0056b3;
 }
 
-/* Style for the timer icon */
 .timer-icon {
-    color: red; /* Timer icon color when time is running out */
+    color: red;
     font-size: 24px;
 }
 
-/* Media query for responsive design */
 @media (max-width: 768px) {
-    /* Adjust styles for smaller screens (e.g., tablets and phones) here */
     .container {
-        padding: 10px; /* Decrease padding for smaller screens */
+        padding: 10px;
     }
 }
